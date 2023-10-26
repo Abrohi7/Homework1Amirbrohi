@@ -1,0 +1,208 @@
+ <!-- Name: Amir Brohi -->
+<!-- Name of file: homework1amirbrohi.html -->
+<!-- Date created: 09/09/2023 -->
+<!-- Date last edited: 09/26/2023
+<!-- Description: Creating a company called "Instapark" where you have to submit your car info
+to use our service! -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="2080688-homework1.css"> 
+    <h1>Insta<span class="green-park">Park</span>Signup</h1> <!-- Color for the header -->
+    <header class="img-logo">
+        <!-- Image For Logo --> <img src="Insta_Logo.png" alt="InstaPark Logo" class="logo-image" width="300" height="300">
+    
+        <p id="currentDateTime"></p> <!-- JS for Time -->
+    </header>
+</head>
+
+<body>
+    <main>
+        <h2>Start Parking with InstaPark</h2>
+        <script src="2080688-Homework1.js"></script>
+<div class="name-container">
+  <label for="first_name">First Name:</label>
+  <input type="text" id="first_name" name="first_name" maxlength="30" required>
+
+  <label for="middle_initial">Middle Initial:</label>
+  <input type="text" id="middle_initial" name="middle_initial" maxlength="1">
+
+  <label for="last_name">Last Name:</label>
+  <input type="text" id="last_name" name="last_name" maxlength="30" required>
+</div>
+<!-- FN, MI, LN -->
+        <label for="dob_month">Date of Birth:</label>
+        <input type="text" id="dob_month" name="dob_month" maxlength="2" placeholder="MM" style="width: 30px;"> /
+        <input type="text" id="dob_day" name="dob_day" maxlength="2" placeholder="DD" style="width: 30px;"> /
+        <input type="text" id="dob_year" name="dob_year" maxlength="4" placeholder="YYYY" style="width: 60px;"> <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required> <br>
+
+        <label for="social_security">Social Security Number:</label>
+<input type="password" id="social_security" name="social_security" minlength="9" maxlength="11" oninput="formatSSN(this)" required>
+<!-- DOB, Email, Social Security Hidden -->
+
+        <div class="label-input-container">
+    <label for="address_line1">Address Line 1:</label>
+    <input type="text" id="address_line1" name="address_line1" maxlength="30" required>
+</div>
+
+<div class="label-input-container">
+    <label for="address_line2">Address Line 2:</label>
+    <input type="text" id="address_line2" name="address_line2" maxlength="30">
+</div>
+<!-- Address Line 1 and Address Line 2 can't put it on the same line -->
+
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" maxlength="30" required><br>
+        
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="" disabled selected>Select your state</option>
+            <!-- City, State -->
+     <option value="AL">AL</option>
+    <option value="AK">AK</option>
+    <option value="AZ">AZ</option>
+    <option value="AR">AR</option>
+    <option value="CA">CA</option>
+    <option value="CO">CO</option>
+    <option value="CT">CT</option>
+    <option value="DE">DE</option>
+    <option value="DC">DC</option>
+    <option value="FL">FL</option>
+    <option value="GA">GA</option>
+    <option value="HI">HI</option>
+    <option value="ID">ID</option>
+    <option value="IL">IL</option>
+    <option value="IN">IN</option>
+    <option value="IA">IA</option>
+    <option value="KS">KS</option>
+    <option value="KY">KY</option>
+    <option value="LA">LA</option>
+    <option value="ME">ME</option>
+    <option value="MD">MD</option>
+    <option value="MA">MA</option>
+    <option value="MI">MI</option>
+    <option value="MN">MN</option>
+    <option value="MS">MS</option>
+    <option value="MO">MO</option>
+    <option value="MT">MT</option>
+    <option value="NE">NE</option>
+    <option value="NV">NV</option>
+    <option value="NH">NH</option>
+    <option value="NJ">NJ</option>
+    <option value="NM">NM</option>
+    <option value="NY">NY</option>
+    <option value="NC">NC</option>
+    <option value="ND">ND</option>
+    <option value="OH">OH</option>
+    <option value="OK">OK</option>
+    <option value="OR">OR</option>
+    <option value="PA">PA</option>
+    <option value="RI">RI</option>
+    <option value="SC">SC</option>
+    <option value="SD">SD</option>
+    <option value="TN">TN</option>
+    <option value="TX">TX</option>
+    <option value="UT">UT</option>
+    <option value="VT">VT</option>
+    <option value="VA">VA</option>
+    <option value="WA">WA</option>
+    <option value="WV">WV</option>
+    <option value="WI">WI</option>
+    <option value="WY">WY</option>
+    <option value="PR">PR</option>
+    <!-- Every Single State -->
+</select>
+
+</select>
+
+        </select><br>
+
+        <label for="zip_code">Zip Code:</label>
+        <input type="text" id="zip_code" name="zip_code" minlength="5" maxlength="10" required><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required><br>
+
+        <label for="Special Requests:">Special Requests:</label><br>
+        <textarea id="Special Requests:" name="Special Requests:" rows="3" cols="50" required></textarea><br>
+<!-- Zip Code, Email, Special Requests (Textbox) -->
+
+        <label>Please select your preferred parking spots:</label><br>
+
+<input type="checkbox" id="spot1" name="preferred_spots" value="spot1">
+<label for="spot1">Near Entrance</label><br>
+
+<input type="checkbox" id="spot2" name="preferred_spots" value="spot2">
+<label for="spot2">Covered Parking</label><br>
+
+<input type="checkbox" id="spot3" name="preferred_spots" value="spot3">
+<label for="spot3">Close to Elevator</label><br>
+
+<input type="checkbox" id="spot4" name="preferred_spots" value="spot4">
+<label for="spot4">Accessible Spot</label><br>
+
+<input type="checkbox" id="spot5" name="preferred_spots" value="spot5">
+<label for="spot5">Well-Lit Area</label><br>
+<!-- 5 Checkboxes -->
+
+  <label for="payment_method">Select your preferred payment method:</label><br>
+        <label>
+            <input type="radio" id="credit_card" name="payment_method" value="credit_card">
+            Credit Card
+        </label><br>
+
+        <label>
+            <input type="radio" id="paypal" name="payment_method" value="paypal">
+            PayPal
+        </label><br>
+
+        <label>
+            <input type="radio" id="bank_transfer" name="payment_method" value="bank_transfer">
+            Bank Transfer
+        </label><br>
+        <!-- Payment Methods -->
+
+
+        <label for="parking_hours">Select the number of hours you plan to park:</label><br>
+    <input type="range" id="parking_hours" name="parking_hours" min="1" max="24" step="1" value="6">
+  <p id="selected_hours_label">Selected Hours: 6</p> <!-- I can't get this to work with the slide. -->
+    
+  <label for="user_id">User ID:</label>
+<input type="text" id="user_id" name="user_id" maxlength="20"><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required><br>
+
+<label for="confirm_password">Re-enter Password:</label>
+<input type="password" id="confirm_password" name="confirm_password" class="password-input" required><br>
+
+
+      
+    </main>
+
+    <footer>
+       <footer>
+    <div>
+        <span>InstaPark</span>
+        <span>Contact Us</span>
+        <span>
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <!-- Social Media Links -->
+        </span>
+    </div>
+    <div>
+     
+        <img src="Insta_Logo.png" alt="Image">
+    </div>
+    <div>
+        Sugar Land, TX 77407
+    </div>
+</footer>
+    </footer>
+</body>
+</html>

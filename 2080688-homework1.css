@@ -1,0 +1,55 @@
+ .name-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name-container label {
+  margin-right: 10px; /* Keep at 10px/
+}
+#middle_initial {
+  width: 5px; /* width */
+}
+body {
+  background-color: rgba(11, 18, 144, 0.428); /*background color Of the Entire Form*/
+}
+.green-park {
+  color: rgb(6, 123, 39); /*The "Park" in Instapark*/
+}
+.logo-image {
+  height: 150px; /* Keep at 200px */
+  width: auto; /* Needed this keep at auto */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+footer span:nth-child(2) {
+  color: green;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Style The Review Button*/
+input[type="button"][value="Review"]{
+  background-color:  #234c1e; /* Green background */
+  
+}
+/* Style The Submit Button */
+input[type="submit"]{
+  background-color:  #1acdc7; /* Blue background */
+}
+function constructReview() {
+  // ... (previous code to retrieve form field values) ...
+  const reviewContent = `
+    <div class="review-container">
+      <h2>Review:</h2>
+      <p><strong>First Name:</strong> ${firstName}</p>
+      <p><strong>Middle Initial:</strong> ${middleInitial}</p>
+      <p><strong>Last Name:</strong> ${lastName}</p>
+      <!-- Add more fields with similar formatting -->
+    </div>
+  `;
+
+  return reviewContent;
+}
